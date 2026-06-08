@@ -1,0 +1,12 @@
+{
+  "name": "sekawan-otomotif-k3",
+  "version": "1.0.0",
+  "description": "Portal K3 PT Sekawan Otomotif",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
