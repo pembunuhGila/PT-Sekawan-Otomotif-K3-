@@ -75,40 +75,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Number Counter Animation
-  const counters = document.querySelectorAll('.counter');
-  let started = false;
+  // 5. Interactive Accordion for Hukum Section
+  const accordionItems = document.querySelectorAll('.accordion-item');
 
-  const startCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
-      
-      let current = 0;
-      const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-          counter.innerText = Math.ceil(current);
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCounter();
-    });
-  };
-
-  // Trigger counters when About section is reached
-  const aboutSection = document.getElementById('about');
-  window.addEventListener('scroll', () => {
-    if (!started && aboutSection) {
-      const sectionPos = aboutSection.getBoundingClientRect().top;
-      if (sectionPos < window.innerHeight - 100) {
-        started = true;
-        startCounters();
-      }
+  accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+    
+    // Set initial max-height for active item (if any)
+    if (item.classList.contains('active')) {
+      // Small timeout to ensure DOM is fully rendered for accurate scrollHeight
+      setTimeout(() => {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }, 50);
     }
+
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all accordion items
+      accordionItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+      });
+
+      // If the clicked item was not active, open it
+      if (!isActive) {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
   });
 
   // 6. Smooth Scrolling for Navigation Links

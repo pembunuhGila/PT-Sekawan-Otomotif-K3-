@@ -22,9 +22,10 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#hero" class="active">Beranda</a></li>
         <li><a href="#about">Profil</a></li>
-        <li><a href="#divisi">Divisi</a></li>
         <li><a href="#hukum">Regulasi</a></li>
+        <li><a href="#denah">Denah Pabrik</a></li>
         <li><a href="#bahaya">Risiko K3</a></li>
+        <li><a href="#video">Video Edukasi</a></li>
       </ul>
     </div>
   </nav>
@@ -121,7 +122,7 @@
     </div>
   </section>
 
-  <!-- Landasan Hukum -->
+  <!-- Landasan Hukum (Interactive Accordion) -->
   <section id="hukum" class="section hukum-section">
     <div class="container">
       <div class="section-header reveal">
@@ -129,24 +130,113 @@
         <h2 class="section-title">Regulasi Pemerintah</h2>
       </div>
       
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">1970</div>
-          <h3 class="timeline-title">UU No. 1 Tahun 1970</h3>
-          <p class="timeline-desc">Undang-Undang Keselamatan Kerja. Merupakan landasan fundamental kewajiban perusahaan dalam melindungi keselamatan para pekerja, mencegah kecelakaan, dan memelihara kebersihan lingkungan kerja.</p>
+      <div class="accordion reveal" id="hukumAccordion">
+        <!-- Accordion Item 1 -->
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">1970</span>
+              <span class="accordion-title">UU No. 1 Tahun 1970 - Keselamatan Kerja</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content" style="max-height: 500px;">
+            <div class="accordion-inner">
+              Merupakan landasan fundamental hukum kewajiban perusahaan dalam melindungi keselamatan para pekerja, mencegah kecelakaan, serta memelihara kebersihan dan kesehatan lingkungan kerja secara menyeluruh. Undang-undang ini mewajibkan setiap tempat kerja untuk memiliki standar K3 yang terverifikasi.
+            </div>
+          </div>
         </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2003</div>
-          <h3 class="timeline-title">UU No. 13 Tahun 2003</h3>
-          <p class="timeline-desc">Undang-Undang Ketenagakerjaan. Mengatur hak pekerja secara mendalam, termasuk jaminan kesehatan, keselamatan selama bertugas, dan hak-hak normatif lainnya di lingkungan industri.</p>
+        <!-- Accordion Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">2003</span>
+              <span class="accordion-title">UU No. 13 Tahun 2003 - Ketenagakerjaan</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              Mengatur hak pekerja secara mendalam, termasuk kewajiban perusahaan untuk memberikan jaminan kesehatan, perlindungan keselamatan selama bertugas, dan hak-hak normatif lainnya di lingkungan industri padat karya seperti pabrik perakitan.
+            </div>
+          </div>
         </div>
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-year">2012</div>
-          <h3 class="timeline-title">PP No. 50 Tahun 2012</h3>
-          <p class="timeline-desc">Sistem Manajemen K3 (SMK3). Mewajibkan integrasi kebijakan K3 ke dalam sistem manajemen perusahaan secara utuh untuk pengendalian risiko yang sistematis dan berkelanjutan.</p>
+        <!-- Accordion Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">2012</span>
+              <span class="accordion-title">PP No. 50 Tahun 2012 - Sistem Manajemen K3</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              Mewajibkan integrasi kebijakan K3 ke dalam sistem manajemen perusahaan secara utuh (SMK3) untuk pengendalian risiko yang sistematis, terukur, dan berkelanjutan, khususnya untuk perusahaan dengan risiko tinggi seperti manufaktur kendaraan berat.
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">2015</span>
+              <span class="accordion-title">Permenaker No. 12 Tahun 2015 - K3 Listrik</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              Mengatur standar Keselamatan dan Kesehatan Kerja khusus untuk instalasi Listrik di Tempat Kerja. Standar ini mewajibkan perusahaan otomotif memastikan seluruh jaringan panel, kabel robotik, dan mesin produksi telah memiliki grounding dan sistem pengaman (LOTO) guna mencegah fatalitas akibat *arc flash* dan sengatan tegangan tinggi.
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item 5 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">2018</span>
+              <span class="accordion-title">Permenaker No. 5 Tahun 2018 - Lingkungan Kerja</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              Fokus pada parameter Keselamatan dan Kesehatan Lingkungan Kerja, yang mengatur batas ambang paparan kebisingan mesin (Maks 85dB untuk 8 jam kerja), standar pencahayaan gudang, suhu udara di ruang perakitan, dan regulasi sirkulasi udara bersih untuk mencegah penyakit akibat kerja.
+            </div>
+          </div>
+        </div>
+        <!-- Accordion Item 6 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <div class="accordion-title-wrapper">
+              <span class="accordion-year">2020</span>
+              <span class="accordion-title">Permenaker No. 8 Tahun 2020 - Pesawat Angkat Angkut</span>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </div>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              Peraturan sangat vital bagi industri berat yang menetapkan prosedur K3 untuk pengoperasian alat angkat dan angkut seperti Forklift, Overhead Crane, dan konveyor di dalam pabrik. Mewajibkan Sertifikat Izin Operator (SIO) yang valid bagi seluruh pengemudi alat berat tersebut.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Denah Pabrik -->
+  <section id="denah" class="section denah-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Visualisasi Area Operasional</span>
+        <h2 class="section-title">Peta Keselamatan Pabrik</h2>
+      </div>
+      <div class="map-container reveal">
+        <!-- User provided map image -->
+        <img src="image.jpeg" alt="Peta Keselamatan Pabrik Otomotif (Lantai 1 dan Lantai 2) beserta jalur evakuasi">
+        <div class="map-note">
+          <i class="fa-solid fa-circle-info"></i> Pelajari rute evakuasi, lokasi Alat Pemadam Api Ringan (APAR), dan letak titik kumpul darurat (Assembly Point) di area operasional Anda.
         </div>
       </div>
     </div>
@@ -496,6 +586,38 @@
     </div>
   </section>
 
+  <!-- Video Edukasi K3 Section -->
+  <section id="video" class="section video-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Pusat Pelatihan</span>
+        <h2 class="section-title">Video Edukasi K3</h2>
+      </div>
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card reveal">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/vAIGQe9IMrU?rel=0" title="Dasar Keselamatan Kerja" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Pentingnya K3 di Lingkungan Pabrik</h3>
+            <p class="video-desc">Pelajari dasar-dasar keselamatan dan mengapa kepatuhan terhadap standar K3 mampu menyelamatkan nyawa dan aset berharga.</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-card reveal" style="transition-delay: 0.2s">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube-nocookie.com/embed/HjM-lhdTPrg?rel=0" title="Prosedur Evakuasi dan APD" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">Pengenalan Bahaya dan APD</h3>
+            <p class="video-desc">Panduan visual cara mengidentifikasi potensi bahaya di tempat kerja serta tata cara pemakaian Alat Pelindung Diri (APD) yang benar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -512,7 +634,7 @@
           <ul>
             <li><a href="#hero">Beranda</a></li>
             <li><a href="#about">Profil Perusahaan</a></li>
-            <li><a href="#divisi">Divisi Utama</a></li>
+            <li><a href="#denah">Denah Pabrik</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -520,7 +642,7 @@
           <ul>
             <li><a href="#hukum">Regulasi K3</a></li>
             <li><a href="#bahaya">Identifikasi Bahaya</a></li>
-            <li><a href="#apd">Panduan APD</a></li>
+            <li><a href="#video">Video Pelatihan</a></li>
           </ul>
         </div>
       </div>

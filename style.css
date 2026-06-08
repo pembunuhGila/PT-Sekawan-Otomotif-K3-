@@ -135,18 +135,28 @@ body {
 .division-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600; letter-spacing: -0.01em; }
 .division-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
-/* --- HUKUM SECTION --- */
-.hukum-section { background: var(--bg-surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
-.timeline { position: relative; max-width: 800px; margin: 0 auto; border-left: 2px solid var(--border-light); padding-left: 2rem; }
-.timeline-item { margin-bottom: 3rem; position: relative; }
-.timeline-item:last-child { margin-bottom: 0; }
-.timeline-dot { 
-  position: absolute; left: -2.65rem; top: 0; width: 1.2rem; height: 1.2rem; 
-  border-radius: 50%; background: var(--bg-surface); border: 3px solid var(--accent); 
-}
-.timeline-year { font-size: 1.25rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; letter-spacing: -0.01em; }
-.timeline-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main); }
-.timeline-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 600px; }
+/* --- HUKUM SECTION (INTERACTIVE ACCORDION) --- */
+.hukum-section { background: var(--bg-main); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+.accordion { display: flex; flex-direction: column; gap: 1rem; max-width: 900px; }
+.accordion-item { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; transition: all 0.3s ease; }
+.accordion-item.active { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.accordion-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; }
+.accordion-header:hover { background: #f9fafb; }
+.accordion-title-wrapper { display: flex; align-items: center; gap: 1rem; }
+.accordion-year { font-weight: 700; color: var(--accent); font-size: 1.1rem; width: 60px; }
+.accordion-title { font-weight: 600; font-size: 1.1rem; color: var(--text-main); }
+.accordion-icon { color: var(--text-muted); font-size: 1.2rem; transition: transform 0.3s ease; }
+.accordion-item.active .accordion-icon { transform: rotate(180deg); color: var(--accent); }
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--bg-surface); }
+.accordion-inner { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; border-top: 1px solid transparent; }
+.accordion-item.active .accordion-inner { border-top-color: var(--border-light); padding-top: 1.5rem; }
+
+/* --- DENAH SECTION --- */
+.denah-section { background: var(--bg-surface); border-bottom: 1px solid var(--border-light); }
+.map-container { background: var(--bg-main); border: 1px solid var(--border-light); border-radius: 12px; padding: 2rem; text-align: center; }
+.map-container img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm); }
+.map-note { margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.map-note i { color: var(--accent); }
 
 /* --- BAHAYA SECTION --- */
 .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
@@ -185,16 +195,27 @@ body {
 
 /* --- APD SECTION --- */
 .apd-section { background: var(--bg-surface); border-top: 1px solid var(--border-light); }
-.apd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; }
+.apd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 .apd-item { 
-  text-align: center; padding: 2.5rem 1rem; background: var(--bg-main); 
+  text-align: center; padding: 2.5rem 1.5rem; background: var(--bg-main); 
   border: 1px solid var(--border-light); border-radius: 12px; transition: border-color 0.2s ease; 
 }
 .apd-item:hover { border-color: var(--accent); }
-.apd-icon { font-size: 2rem; margin-bottom: 1rem; color: var(--text-main); }
+.apd-icon { font-size: 2.5rem; margin-bottom: 1.25rem; color: var(--text-main); }
 .apd-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-main); letter-spacing: -0.01em; }
-.apd-zones { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.apd-zones { font-size: 0.75rem; color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; }
 .apd-hazard { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; border-top: 1px dashed var(--border-light); padding-top: 0.75rem; margin-top: 0.75rem; text-align: left; }
+
+/* --- VIDEO EDUKASI SECTION --- */
+.video-section { background: var(--bg-main); border-bottom: 1px solid var(--border-light); }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+.video-card { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow 0.3s ease; }
+.video-card:hover { box-shadow: var(--shadow-md); }
+.video-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */ height: 0; overflow: hidden; background: #000; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.video-info { padding: 1.5rem; }
+.video-title { font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem; }
+.video-desc { font-size: 0.9rem; color: var(--text-muted); }
 
 /* --- FOOTER --- */
 .footer { padding: 4rem 0 2rem; background: #111827; color: #f9fafb; }
@@ -220,7 +241,6 @@ body {
   .nav-links.active { display: flex; }
   .hero-title { font-size: 2.5rem; }
   .about-grid { grid-template-columns: 1fr; }
-  .timeline { padding-left: 1.5rem; }
-  .timeline-dot { left: -2.15rem; }
+  .video-grid { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; gap: 2rem; }
 }
